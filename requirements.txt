@@ -1,0 +1,4 @@
+flask
+Flask-GoogleMaps
+Flask-WTF
+Flask-SQLAlchemy

@@ -2,3 +2,5 @@
 *.pyc
 flask/*
 *.db
+db_repository/*
+tmp/*

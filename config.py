@@ -15,3 +15,9 @@ OPENID_PROVIDERS =  [
                       { 'name': 'MyOpenID', 'url': 'https://www.myopenid.com' }
                      ]
 
+MAIL_SERVER = 'localhost'
+MAIL_PORT   = 250
+MAIL_USERNAME = None
+MAIL_PASSWORD = None
+
+ADMINS = ['you@example.com']

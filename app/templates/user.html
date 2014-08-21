@@ -13,8 +13,17 @@
       {% if user.last_seen %}
         <p>{{user.last_seen}}</p>
       {% endif %}
+
+      <p>{{user.followers.count()}} followers | 
 <!-- show EDIT link for the user who is viewing his owner profile link, not the other ones -->
-      {% if user.id == g.user.id %}<p><a href="{{url_for('edit')}}">Edit</a></p>{% endif %}
+            {% if user.id == g.user.id %}
+                <a href="{{url_for('edit')}}">Edit your profile</a>
+            {% elif not g.user.is_following(user) %}
+                <a href="{{url_for('follow', nickname = user.nickname)}}">Follow</a>
+            {% else %}
+                <a href="{{url_for('unfollow', nickname = user.nickname)}}">Unfollow</a>
+            {% endif %}
+      </p>
      </td>
   </tr>
 </table>
